@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import animejs from 'animejs';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
+import { MyPP } from './components/MyPP';
+import HomeScreen from './pages/HomeScreen';
 
 function App() {
+  useEffect(() => {
+    animejs({
+      targets: ".texts h2",
+      translateY: [100, 0],
+      easing: "easeOutExpo",
+      opacity: [0, 1],
+      duration: 2700,
+    })
+    animejs({
+      targets: ".texts p",
+      translateY: [48, 0],
+      easing: "easeOutExpo",
+      opacity: [0, 1],
+      duration: 2700,
+      delay: 400,
+    })
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <HomeScreen />
+      {/* <MyPP /> */}
+    </Router>
   );
 }
 

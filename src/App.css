@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Now Display', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  color: #fff;
+  display: flex;
+  position: relative;
+  flex: 1;
+  width: 200px;
+  height: 50px;
+
+  background: linear-gradient(-45deg, #F19385, #EF9577, #E67C8C, #D27E92);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@-webkit-keyframes Gradient {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@-moz-keyframes Gradient {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@keyframes Gradient {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+.texts {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 80%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow-y: scroll;
 }
 
-.App-link {
-  color: #61dafb;
+.texts h2 {
+  font-family: 'Work Sans';
+  font-size: 6.5rem;
+  font-weight: 900;
+  line-height: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.texts p {
+  font-family: 'Work Sans';
+  font-size: 1.5rem;
+  line-height: 0;
 }

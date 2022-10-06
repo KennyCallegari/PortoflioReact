@@ -1,0 +1,29 @@
+.body-fixed {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.head-left {
+  position: absolute;
+  bottom: 532px;
+  right: 232px;
+}
+
+.head-right {
+  position: absolute;
+  bottom: 555px;
+  right: 170px;
+}
+
+.body-left {
+  position: absolute;
+  bottom: 162px;
+  right: 246px;
+}
+
+.body-right {
+  position: absolute;
+  bottom: 301px;
+  right: 93px;
+}
