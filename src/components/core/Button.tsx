@@ -1,27 +1,15 @@
-import React, { ReactNode } from 'react'
 import { Link } from 'react-scroll';
-import styles from './core.module.css';
+import styles from './Button.module.css';
 
 interface IButtonProps {
-  children: ReactNode,
+  label: string,
   to: string,
-  secondary?: boolean,
-  big?: boolean,
-  dark?: boolean,
-  fontBig?: boolean,
-  smooth?: boolean, 
-  duration?: number, 
-  spy?: boolean, 
-  offset?: number,
-  onMouseEnter?: () => void,
-  onMouseLeave?: () => void,
 }
 
-const Button = ({ children, to, secondary, big, fontBig, dark, smooth, duration, spy, offset, onMouseEnter,  onMouseLeave }: IButtonProps) => {
+const Button = ({ label, to }: IButtonProps) => {
   return (
-    <Link to={to} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} smooth={smooth} duration={duration} spy={spy} offset={offset}
-    className={`${styles.button} ${secondary ? styles.secondary : ''}  ${big ? styles.big : ''}  ${fontBig ? styles.fontBig : ''}  ${dark ? styles.dark : ''}  ${fontBig ? styles.fontBig : ''}  ${dark ? styles.dark : ''}`}>
-      {children}
+    <Link to={to} smooth duration={800} spy offset={-80} className={styles.button}>
+      <p className={styles.label}>{label}</p>
     </Link>
   )
 }

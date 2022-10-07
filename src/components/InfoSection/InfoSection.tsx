@@ -1,10 +1,5 @@
-import React from 'react';
-import { FaBars } from 'react-icons/fa';
-import { Link as LinkRouter } from 'react-router-dom';
-import { Link as LinkScroll } from 'react-scroll';
 import Lottie from 'react-lottie';
 import * as animationData from '../../images/about.json'
-import { Button } from '../core';
 import styles from './InfoSection.module.css';
 
 interface IInfoSectionProps {
@@ -17,7 +12,7 @@ interface IInfoSectionProps {
   description: string,
   buttonLabel?: string,
   imgStart?: boolean,
-  img: any,
+  img?: any,
   alt: string,
   primary?: boolean,
   lottie?: boolean,
@@ -35,9 +30,6 @@ const InfoSection = ({id, lightBg, lightText, lightTextDesc, topLine, headLine, 
                 <p className={styles.topLine}>{topLine}</p>
                 <h1 className={`${styles.heading}  ${lightText ? styles.headingLightText : ''}`}>{headLine}</h1>
                 <p className={`${styles.subtitle} ${lightTextDesc ? styles.subtitleLightText : ''}`}>{description}</p>
-                <div className={`${styles.buttonContainer}`}>
-                  <Button to="Home" secondary={!primary} smooth duration={500} spy offset={-80}>{buttonLabel}</Button>
-                </div>
               </div>
             </div>
             <div className={styles.column2}>

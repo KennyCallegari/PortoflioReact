@@ -106,11 +106,6 @@
   color: #fff;
 }
 
-.buttonContainer {
-  display: flex;
-  justify-content: flex-start;
-}
-
 .imgContainer {
   max-width: 555px;
   height: 100%;
